@@ -10,17 +10,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-	FileInputStream fis;
-	Properties config = new Properties();
-	WebDriver driver;
+	public static FileInputStream fis;
+	public static Properties config = new Properties();
+	public static WebDriver driver;
+	public static WebDriverWait wait;
 	
 	@BeforeSuite
-	public WebDriver setup() throws FileNotFoundException {
+	public WebDriver setup() throws FileNotFoundException, InterruptedException {
 
 		fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\opencart\\driverscript\\Configuration.properties");
 
@@ -51,18 +53,18 @@ public class TestBase {
 		}
 
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicitwait")),TimeUnit.SECONDS);
-		driver.manage().window().maximize();
 		driver.get(config.getProperty("url"));
-
+		driver.manage().window().maximize();
+		System.out.println("Application is Launched Successfully");
 		return driver;
 	}
-	
+
 	@AfterSuite
 	public void tearDown() {
 		if(driver!=null) {
 			driver.quit();
 			System.out.println("Application is closed successfully");
 		}
-
 	}
+
 }

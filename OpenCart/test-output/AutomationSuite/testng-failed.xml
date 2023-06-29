@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="OpencartEndToEndFlow(failed)">
+    <classes>
+      <class name="com.opencart.testcases.HomePageTests">
+        <methods>
+          <include name="validatingCamerasPageNavigation"/>
+          <include name="slectingDollarCurrency"/>
+          <include name="validatingLaptopsAndNotebooksPageNavigation"/>
+          <include name="validatingTabletsPageNavigation"/>
+          <include name="validatingComponentsPageNavigation"/>
+          <include name="validatingCheckoutPageNavigation"/>
+          <include name="validatingMp3PlayersPageNavigation"/>
+          <include name="validatingContactUsPageNavigation"/>
+          <include name="setup"/>
+          <include name="validatingDesktopsPageNavigation"/>
+          <include name="slectingPoundCurrency"/>
+          <include name="validatingWishlistPageNavigation"/>
+          <include name="validatingPhonesAndPDAsPageNavigation"/>
+          <include name="validatingLoginUserPageNavigation"/>
+          <include name="validatingShoppingCartPageNavigation"/>
+          <include name="validatingSoftwaresPageNavigation"/>
+          <include name="validatingFirstFeaturedProduct"/>
+          <include name="validatingRegisterUserPageNavigation"/>
+        </methods>
+      </class> <!-- com.opencart.testcases.HomePageTests -->
+    </classes>
+  </test> <!-- OpencartEndToEndFlow(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->
