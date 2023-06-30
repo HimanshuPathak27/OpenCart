@@ -45,7 +45,4 @@ public class ObjectRepository {
 	//Featured Products
 	public static final String firstFeaturedProductXpath = "(//div//h4//a[1])[1]";
 	public static final String firstFeaturedProductPriceXpath = "(//span[@class='price-new'])[1]";
-	public static final String firstFeaturedProductAddToCartXpath = "(//button[@aria-label='Add to Cart'])[1]";
-	public static final String firstFeaturedProductAddToWishlistXpath = "(//button[@aria-label='Add to Wish List'])[1]";
-	public static final String firstFeaturedProductCompareXpath = "(//button[@aria-label='Compare this Product'])[1]";
 }

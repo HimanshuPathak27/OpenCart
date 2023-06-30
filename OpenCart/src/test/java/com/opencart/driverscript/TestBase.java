@@ -56,6 +56,7 @@ public class TestBase {
 		driver.get(config.getProperty("url"));
 		driver.manage().window().maximize();
 		System.out.println("Application is Launched Successfully");
+		System.out.println();
 		return driver;
 	}
 
